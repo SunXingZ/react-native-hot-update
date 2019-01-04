@@ -23,6 +23,8 @@ typedef void(^FailureBlock)(NSError *error);
 
 @interface HRequestManager : NSObject
 
++ (NSURLSessionDataTask *)sendWithRequestMethod:(RequestMethod)requestMethod URLString:(NSString *)urlString params:(NSDictionary *)params error:(NSError *__autoreleasing *)error completionHandler:(CompletionHandleBlock)completion;
+
 @end
 
 NS_ASSUME_NONNULL_END
