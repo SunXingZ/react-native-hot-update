@@ -1,20 +1,19 @@
 //
-//  HBundleManager.h
-//  RNHotupdate
+//  JSBundleManager.h
+//  fangxinjia
 //
-//  Created by 放心家 on 2019/1/4.
-//  Copyright © 2019 Facebook. All rights reserved.
+//  Created by 孙行者 on 2018/12/5.
+//  Copyright © 2018 Facebook. All rights reserved.
 //
-
 #import <Foundation/Foundation.h>
-#import <React/RCTBridge.h>
 #import <React/RCTRootView.h>
+#import <React/RCTBridge.h>
 
-NS_ASSUME_NONNULL_BEGIN
+//#define APP_VERSION ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"])
 
 typedef void(^CompletionBlock)(BOOL result);
 
-@interface HBundleManager : NSObject
+@interface JSBundleManager : NSObject
 
 - (NSString *)JSBundlePath;
 
@@ -61,5 +60,3 @@ typedef void(^CompletionBlock)(BOOL result);
          completeHandler:(CompletionBlock)complete;
 
 @end
-
-NS_ASSUME_NONNULL_END

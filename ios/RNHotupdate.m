@@ -1,19 +1,24 @@
 
 #import "RNHotupdate.h"
-#import "Utils/HBundleManager.h"
+#import <Foundation/Foundation.h>
+#import <React/RCTBridge.h>
+#import "JSBundleManager/JSBundleManager.h"
 
 @implementation RNHotupdate
 
-- (dispatch_queue_t)methodQueue
+@synthesize bridge = _bridge;
+
+RCT_EXPORT_MODULE();
+
++ (BOOL)requiresMainQueueSetup
 {
-    return dispatch_get_main_queue();
+    return YES;
 }
-RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(downloadJSBundleFromServer:(NSString *)downloadUrl callback:(RCTResponseSenderBlock)callback) {
-    HBundleManager *BundleManager = [[HBundleManager alloc] init];
-    NSURL *targetPath = [NSURL fileURLWithPath:[BundleManager JSBundlePath]];
-    [BundleManager downloadCodeFrom:downloadUrl toURL:targetPath completeHandler:^(BOOL result) {
+    JSBundleManager *JSBManager = [[JSBundleManager alloc] init];
+    NSURL *targetPath = [NSURL fileURLWithPath:[JSBManager JSBundlePath]];
+    [JSBManager downloadCodeFrom:downloadUrl toURL:targetPath completeHandler:^(BOOL result) {
         NSNumber *status;
         if (result) {
             status = [[NSNumber alloc] initWithInt:1];
@@ -22,6 +27,17 @@ RCT_EXPORT_METHOD(downloadJSBundleFromServer:(NSString *)downloadUrl callback:(R
         }
         callback(@[status]);
     }];
+}
+
+RCT_EXPORT_METHOD(reloadJSBundle) {
+    if ([NSThread isMainThread]) {
+        [_bridge reload];
+    } else {
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [_bridge reload];
+        });
+    }
+    return;
 }
 
 @end

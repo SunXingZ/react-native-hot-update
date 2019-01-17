@@ -1,16 +1,13 @@
 //
-//  HFileManager.h
-//  RNHotupdate
+//  JSBundleFileManager.h
+//  fangxinjia
 //
-//  Created by 放心家 on 2019/1/4.
-//  Copyright © 2019 Facebook. All rights reserved.
+//  Created by 孙行者 on 2018/12/5.
+//  Copyright © 2018 Facebook. All rights reserved.
 //
-
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface HFileManager : NSObject
+@interface JSBundleFileManager : NSObject
 
 + (BOOL)isFileExistInPath:(NSString *)path;
 
@@ -37,5 +34,3 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)contentsEqualAtPath:(NSString *)path1 andPath:(NSString *)path2;
 
 @end
-
-NS_ASSUME_NONNULL_END

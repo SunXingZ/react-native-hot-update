@@ -8,9 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* RNHotupdate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNHotupdate.m */; };
-		C340813821DF0752002BECA7 /* HFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C340813721DF0752002BECA7 /* HFileManager.m */; };
-		C340813E21DF07AB002BECA7 /* HBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C340813D21DF07AB002BECA7 /* HBundleManager.m */; };
-		C340814121DF07D0002BECA7 /* HRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C340814021DF07D0002BECA7 /* HRequestManager.m */; };
+		C3E1418721F077FC00665863 /* crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1416121F077FC00665863 /* crypt.c */; };
+		C3E1418821F077FC00665863 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1416221F077FC00665863 /* unzip.c */; };
+		C3E1418921F077FC00665863 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1416321F077FC00665863 /* zip.c */; };
+		C3E1418A21F077FC00665863 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1416521F077FC00665863 /* ioapi.c */; };
+		C3E1418B21F077FC00665863 /* ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1416721F077FC00665863 /* ioapi_buf.c */; };
+		C3E1418C21F077FC00665863 /* ioapi_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1416B21F077FC00665863 /* ioapi_mem.c */; };
+		C3E1418D21F077FC00665863 /* minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1416C21F077FC00665863 /* minishared.c */; };
+		C3E1418E21F077FC00665863 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1417221F077FC00665863 /* aeskey.c */; };
+		C3E1418F21F077FC00665863 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1417321F077FC00665863 /* hmac.c */; };
+		C3E1419021F077FC00665863 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1417621F077FC00665863 /* aescrypt.c */; };
+		C3E1419121F077FC00665863 /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1417721F077FC00665863 /* fileenc.c */; };
+		C3E1419221F077FC00665863 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1417921F077FC00665863 /* sha1.c */; };
+		C3E1419321F077FC00665863 /* aes_ni.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1417C21F077FC00665863 /* aes_ni.c */; };
+		C3E1419421F077FC00665863 /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1417E21F077FC00665863 /* prng.c */; };
+		C3E1419521F077FC00665863 /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1418021F077FC00665863 /* pwd2key.c */; };
+		C3E1419621F077FC00665863 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = C3E1418121F077FC00665863 /* aestab.c */; };
+		C3E1419721F077FC00665863 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E1418621F077FC00665863 /* SSZipArchive.m */; };
+		C3E141A121F0780C00665863 /* JSBundleFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E1419921F0780C00665863 /* JSBundleFileManager.m */; };
+		C3E141A321F0780C00665863 /* JSBundleNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E1419F21F0780C00665863 /* JSBundleNetWorkManager.m */; };
+		C3E141A421F0780C00665863 /* JSBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E141A021F0780C00665863 /* JSBundleManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,12 +46,50 @@
 		134814201AA4EA6300B7C361 /* libRNHotupdate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNHotupdate.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* RNHotupdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNHotupdate.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNHotupdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNHotupdate.m; sourceTree = "<group>"; };
-		C340813621DF0752002BECA7 /* HFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFileManager.h; sourceTree = "<group>"; };
-		C340813721DF0752002BECA7 /* HFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFileManager.m; sourceTree = "<group>"; };
-		C340813C21DF07AB002BECA7 /* HBundleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBundleManager.h; sourceTree = "<group>"; };
-		C340813D21DF07AB002BECA7 /* HBundleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBundleManager.m; sourceTree = "<group>"; };
-		C340813F21DF07D0002BECA7 /* HRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRequestManager.h; sourceTree = "<group>"; };
-		C340814021DF07D0002BECA7 /* HRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRequestManager.m; sourceTree = "<group>"; };
+		C3E1415F21F077FC00665863 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		C3E1416121F077FC00665863 /* crypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypt.c; sourceTree = "<group>"; };
+		C3E1416221F077FC00665863 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		C3E1416321F077FC00665863 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		C3E1416421F077FC00665863 /* minishared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minishared.h; sourceTree = "<group>"; };
+		C3E1416521F077FC00665863 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		C3E1416621F077FC00665863 /* ioapi_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_mem.h; sourceTree = "<group>"; };
+		C3E1416721F077FC00665863 /* ioapi_buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi_buf.c; sourceTree = "<group>"; };
+		C3E1416821F077FC00665863 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		C3E1416921F077FC00665863 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		C3E1416A21F077FC00665863 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		C3E1416B21F077FC00665863 /* ioapi_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi_mem.c; sourceTree = "<group>"; };
+		C3E1416C21F077FC00665863 /* minishared.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = minishared.c; sourceTree = "<group>"; };
+		C3E1416D21F077FC00665863 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		C3E1416E21F077FC00665863 /* ioapi_buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_buf.h; sourceTree = "<group>"; };
+		C3E1417021F077FC00665863 /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prng.h; sourceTree = "<group>"; };
+		C3E1417121F077FC00665863 /* aes_ni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_ni.h; sourceTree = "<group>"; };
+		C3E1417221F077FC00665863 /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aeskey.c; sourceTree = "<group>"; };
+		C3E1417321F077FC00665863 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		C3E1417421F077FC00665863 /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
+		C3E1417521F077FC00665863 /* pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pwd2key.h; sourceTree = "<group>"; };
+		C3E1417621F077FC00665863 /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aescrypt.c; sourceTree = "<group>"; };
+		C3E1417721F077FC00665863 /* fileenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileenc.c; sourceTree = "<group>"; };
+		C3E1417821F077FC00665863 /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
+		C3E1417921F077FC00665863 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		C3E1417A21F077FC00665863 /* brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_types.h; sourceTree = "<group>"; };
+		C3E1417B21F077FC00665863 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		C3E1417C21F077FC00665863 /* aes_ni.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aes_ni.c; sourceTree = "<group>"; };
+		C3E1417D21F077FC00665863 /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		C3E1417E21F077FC00665863 /* prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prng.c; sourceTree = "<group>"; };
+		C3E1417F21F077FC00665863 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		C3E1418021F077FC00665863 /* pwd2key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pwd2key.c; sourceTree = "<group>"; };
+		C3E1418121F077FC00665863 /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aestab.c; sourceTree = "<group>"; };
+		C3E1418221F077FC00665863 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		C3E1418321F077FC00665863 /* fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileenc.h; sourceTree = "<group>"; };
+		C3E1418421F077FC00665863 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		C3E1418521F077FC00665863 /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
+		C3E1418621F077FC00665863 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		C3E1419921F0780C00665863 /* JSBundleFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBundleFileManager.m; sourceTree = "<group>"; };
+		C3E1419B21F0780C00665863 /* JSBundleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBundleManager.h; sourceTree = "<group>"; };
+		C3E1419C21F0780C00665863 /* JSBundleNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBundleNetWorkManager.h; sourceTree = "<group>"; };
+		C3E1419D21F0780C00665863 /* JSBundleFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBundleFileManager.h; sourceTree = "<group>"; };
+		C3E1419F21F0780C00665863 /* JSBundleNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBundleNetWorkManager.m; sourceTree = "<group>"; };
+		C3E141A021F0780C00665863 /* JSBundleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBundleManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,24 +114,86 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				C340813521DF06D6002BECA7 /* Utils */,
+				C3E1419821F0780C00665863 /* JSBundleManager */,
+				C3E1415E21F077FC00665863 /* SSZipArchive */,
 				B3E7B5881CC2AC0600A0062D /* RNHotupdate.h */,
 				B3E7B5891CC2AC0600A0062D /* RNHotupdate.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C340813521DF06D6002BECA7 /* Utils */ = {
+		C3E1415E21F077FC00665863 /* SSZipArchive */ = {
 			isa = PBXGroup;
 			children = (
-				C340813621DF0752002BECA7 /* HFileManager.h */,
-				C340813721DF0752002BECA7 /* HFileManager.m */,
-				C340813C21DF07AB002BECA7 /* HBundleManager.h */,
-				C340813D21DF07AB002BECA7 /* HBundleManager.m */,
-				C340813F21DF07D0002BECA7 /* HRequestManager.h */,
-				C340814021DF07D0002BECA7 /* HRequestManager.m */,
+				C3E1415F21F077FC00665863 /* ZipArchive.h */,
+				C3E1416021F077FC00665863 /* minizip */,
+				C3E1418421F077FC00665863 /* SSZipArchive.h */,
+				C3E1418521F077FC00665863 /* SSZipCommon.h */,
+				C3E1418621F077FC00665863 /* SSZipArchive.m */,
 			);
-			path = Utils;
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		C3E1416021F077FC00665863 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				C3E1416121F077FC00665863 /* crypt.c */,
+				C3E1416221F077FC00665863 /* unzip.c */,
+				C3E1416321F077FC00665863 /* zip.c */,
+				C3E1416421F077FC00665863 /* minishared.h */,
+				C3E1416521F077FC00665863 /* ioapi.c */,
+				C3E1416621F077FC00665863 /* ioapi_mem.h */,
+				C3E1416721F077FC00665863 /* ioapi_buf.c */,
+				C3E1416821F077FC00665863 /* crypt.h */,
+				C3E1416921F077FC00665863 /* zip.h */,
+				C3E1416A21F077FC00665863 /* unzip.h */,
+				C3E1416B21F077FC00665863 /* ioapi_mem.c */,
+				C3E1416C21F077FC00665863 /* minishared.c */,
+				C3E1416D21F077FC00665863 /* ioapi.h */,
+				C3E1416E21F077FC00665863 /* ioapi_buf.h */,
+				C3E1416F21F077FC00665863 /* aes */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		C3E1416F21F077FC00665863 /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				C3E1417021F077FC00665863 /* prng.h */,
+				C3E1417121F077FC00665863 /* aes_ni.h */,
+				C3E1417221F077FC00665863 /* aeskey.c */,
+				C3E1417321F077FC00665863 /* hmac.c */,
+				C3E1417421F077FC00665863 /* aestab.h */,
+				C3E1417521F077FC00665863 /* pwd2key.h */,
+				C3E1417621F077FC00665863 /* aescrypt.c */,
+				C3E1417721F077FC00665863 /* fileenc.c */,
+				C3E1417821F077FC00665863 /* aesopt.h */,
+				C3E1417921F077FC00665863 /* sha1.c */,
+				C3E1417A21F077FC00665863 /* brg_types.h */,
+				C3E1417B21F077FC00665863 /* hmac.h */,
+				C3E1417C21F077FC00665863 /* aes_ni.c */,
+				C3E1417D21F077FC00665863 /* brg_endian.h */,
+				C3E1417E21F077FC00665863 /* prng.c */,
+				C3E1417F21F077FC00665863 /* aes.h */,
+				C3E1418021F077FC00665863 /* pwd2key.c */,
+				C3E1418121F077FC00665863 /* aestab.c */,
+				C3E1418221F077FC00665863 /* sha1.h */,
+				C3E1418321F077FC00665863 /* fileenc.h */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
+		C3E1419821F0780C00665863 /* JSBundleManager */ = {
+			isa = PBXGroup;
+			children = (
+				C3E1419921F0780C00665863 /* JSBundleFileManager.m */,
+				C3E1419B21F0780C00665863 /* JSBundleManager.h */,
+				C3E1419C21F0780C00665863 /* JSBundleNetWorkManager.h */,
+				C3E1419D21F0780C00665863 /* JSBundleFileManager.h */,
+				C3E1419F21F0780C00665863 /* JSBundleNetWorkManager.m */,
+				C3E141A021F0780C00665863 /* JSBundleManager.m */,
+			);
+			path = JSBundleManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,10 +252,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C340814121DF07D0002BECA7 /* HRequestManager.m in Sources */,
-				C340813E21DF07AB002BECA7 /* HBundleManager.m in Sources */,
-				C340813821DF0752002BECA7 /* HFileManager.m in Sources */,
+				C3E1419521F077FC00665863 /* pwd2key.c in Sources */,
+				C3E1419421F077FC00665863 /* prng.c in Sources */,
+				C3E1419721F077FC00665863 /* SSZipArchive.m in Sources */,
+				C3E141A421F0780C00665863 /* JSBundleManager.m in Sources */,
+				C3E1419321F077FC00665863 /* aes_ni.c in Sources */,
+				C3E1419221F077FC00665863 /* sha1.c in Sources */,
+				C3E1419121F077FC00665863 /* fileenc.c in Sources */,
+				C3E1418F21F077FC00665863 /* hmac.c in Sources */,
+				C3E1418B21F077FC00665863 /* ioapi_buf.c in Sources */,
+				C3E141A121F0780C00665863 /* JSBundleFileManager.m in Sources */,
+				C3E1418D21F077FC00665863 /* minishared.c in Sources */,
+				C3E1419621F077FC00665863 /* aestab.c in Sources */,
+				C3E1418821F077FC00665863 /* unzip.c in Sources */,
+				C3E1419021F077FC00665863 /* aescrypt.c in Sources */,
+				C3E141A321F0780C00665863 /* JSBundleNetWorkManager.m in Sources */,
+				C3E1418921F077FC00665863 /* zip.c in Sources */,
+				C3E1418C21F077FC00665863 /* ioapi_mem.c in Sources */,
+				C3E1418721F077FC00665863 /* crypt.c in Sources */,
+				C3E1418E21F077FC00665863 /* aeskey.c in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNHotupdate.m in Sources */,
+				C3E1418A21F077FC00665863 /* ioapi.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
