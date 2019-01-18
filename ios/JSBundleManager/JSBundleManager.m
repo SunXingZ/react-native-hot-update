@@ -50,7 +50,7 @@
 }
 
 - (NSString *)pathForJSBundleInDocumentsDirectory {
-    NSString *fileName = [[@"main_" stringByAppendingString:APP_VERSION] stringByAppendingPathExtension:@"jsbundle"];
+    NSString *fileName = [@"main" stringByAppendingPathExtension:@"jsbundle"];
     NSString *filePath = [[self JSBundlePath] stringByAppendingPathComponent: fileName];
     return filePath;
 }
@@ -133,8 +133,12 @@
     rootView = [self createRootViewWithURL:jsCodeLocation moduleName:moduleName launchOptions:launchOptions];
 #else
     jsCodeLocation = [self URLForJSBundleInDocumentsDirectory];
-    if (![self hasJSBundleInDocumentsDirectory]) {
+    NSString *appVersion = [[NSUserDefaults standardUserDefaults] stringForKey:@"appVersion"];
+    if (![appVersion isEqualToString:APP_VERSION]) {
         [self resetJSBundlePath];
+        [[NSUserDefaults standardUserDefaults] setValue:APP_VERSION forKey:@"appVersion"];
+    }
+    if (![self hasJSBundleInDocumentsDirectory]) {
         BOOL copyJSBundleResult = [self copyJSBundleFileToURL:[self URLForJSBundleInDocumentsDirectory]];
         if (!copyJSBundleResult) {
             [self resetJSBundlePath];
@@ -178,7 +182,7 @@
             !complete ?: complete(NO);
             return;
         }
-        NSString *fileName = [[@"main_" stringByAppendingString:APP_VERSION] stringByAppendingPathExtension:@"jsbundle"];
+        NSString *fileName = [@"main" stringByAppendingPathExtension:@"jsbundle"];
         NSString *filePath = [[self JSBundlePath] stringByAppendingPathComponent: fileName];
         NSString *zipFileName = [fileName stringByAppendingPathExtension:@"zip"];
         NSString *zipFilePath = [[self JSBundlePath] stringByAppendingPathComponent: zipFileName];

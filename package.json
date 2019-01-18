@@ -1,18 +1,40 @@
-
 {
-  "name": "react-native-hotupdate",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "git+https://github.com/SunXingZ/react-native-hot-update.git",
+  "_id": "react-native-hotupdate@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/react-native-hotupdate",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/SunXingZ/react-native-hot-update.git",
+    "rawSpec": "https://github.com/SunXingZ/react-native-hot-update.git",
+    "saveSpec": "git+https://github.com/SunXingZ/react-native-hot-update.git",
+    "fetchSpec": "https://github.com/SunXingZ/react-native-hot-update.git",
+    "gitCommittish": null
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/SunXingZ/react-native-hot-update.git#f1617448aa6c97ae18009e9360cef3825746d5bb",
+  "_spec": "https://github.com/SunXingZ/react-native-hot-update.git",
+  "_where": "/Users/fxj/Desktop/work/react-native-fangxinjia",
+  "author": "",
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "## Getting started",
   "keywords": [
     "react-native"
   ],
-  "author": "",
   "license": "",
+  "main": "index.js",
+  "name": "react-native-hotupdate",
   "peerDependencies": {
     "react-native": "^0.41.2"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }
