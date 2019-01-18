@@ -50,7 +50,7 @@
 }
 
 - (NSString *)pathForJSBundleInDocumentsDirectory {
-    NSString *fileName = [@"main" stringByAppendingPathExtension:@"jsbundle"];
+    NSString *fileName = [[@"main_" stringByAppendingString:APP_VERSION] stringByAppendingPathExtension:@"jsbundle"];
     NSString *filePath = [[self JSBundlePath] stringByAppendingPathComponent: fileName];
     return filePath;
 }
@@ -132,48 +132,27 @@
     jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
     rootView = [self createRootViewWithURL:jsCodeLocation moduleName:moduleName launchOptions:launchOptions];
 #else
+    jsCodeLocation = [self URLForJSBundleInDocumentsDirectory];
+    if (![self hasJSBundleInDocumentsDirectory]) {
+        [self resetJSBundlePath];
+        BOOL copyJSBundleResult = [self copyJSBundleFileToURL:[self URLForJSBundleInDocumentsDirectory]];
+        if (!copyJSBundleResult) {
+            [self resetJSBundlePath];
+            jsCodeLocation = [self URLForJSBundleInProject];
+        }
+    }
     if ([self hasAssetsInProjectDirectory]) {
         if (![self hasAssetsInDocumentsDirectory]) {
-            [self resetJSBundlePath];
             BOOL copyAssetsResult = [self copyAssetsFileToURL:[self URLForAssetsInDocumentsDirectory]];
-            if(copyAssetsResult) {
-                jsCodeLocation = [self URLForJSBundleInDocumentsDirectory];
-            } else {
+            if(!copyAssetsResult) {
+                [self resetJSBundlePath];
                 jsCodeLocation = [self URLForJSBundleInProject];
-            }
-            if (![self hasJSBundleInDocumentsDirectory]) {
-                BOOL copyJSBundleResult = [self copyJSBundleFileToURL:[self URLForJSBundleInDocumentsDirectory]];
-                if (!copyJSBundleResult) {
-                    [self resetJSBundlePath];
-                    jsCodeLocation = [self URLForJSBundleInProject];
-                }
             }
         } else {
             NSString *mainAssets = [self pathForAssetsInProject];
             NSString *documentsAssets = [self pathForAssetsInDocumentsDirectory];
             BOOL isSameAssets = [JSBundleFileManager contentsEqualAtPath:mainAssets andPath:documentsAssets];
-            if (isSameAssets) {
-                if (![self hasJSBundleInDocumentsDirectory]) {
-                    BOOL copyJSBundleResult = [self copyJSBundleFileToURL:[self URLForJSBundleInDocumentsDirectory]];
-                    if (copyJSBundleResult) {
-                        jsCodeLocation = [self URLForJSBundleInDocumentsDirectory];
-                    } else {
-                        [self resetJSBundlePath];
-                        jsCodeLocation = [self URLForJSBundleInProject];
-                    }
-                } else {
-                    jsCodeLocation = [self URLForJSBundleInDocumentsDirectory];
-                }
-            } else {
-                [self resetJSBundlePath];
-                jsCodeLocation = [self URLForJSBundleInProject];
-            }
-        }
-    } else {
-        jsCodeLocation = [self URLForJSBundleInDocumentsDirectory];
-        if (![self hasJSBundleInDocumentsDirectory]) {
-            BOOL copyJSBundleResult = [self copyJSBundleFileToURL:[self URLForJSBundleInDocumentsDirectory]];
-            if (!copyJSBundleResult) {
+            if (!isSameAssets) {
                 [self resetJSBundlePath];
                 jsCodeLocation = [self URLForJSBundleInProject];
             }
@@ -199,7 +178,7 @@
             !complete ?: complete(NO);
             return;
         }
-        NSString *fileName = [@"main" stringByAppendingPathExtension:@"jsbundle"];
+        NSString *fileName = [[@"main_" stringByAppendingString:APP_VERSION] stringByAppendingPathExtension:@"jsbundle"];
         NSString *filePath = [[self JSBundlePath] stringByAppendingPathComponent: fileName];
         NSString *zipFileName = [fileName stringByAppendingPathExtension:@"zip"];
         NSString *zipFilePath = [[self JSBundlePath] stringByAppendingPathComponent: zipFileName];

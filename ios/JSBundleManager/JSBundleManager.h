@@ -9,7 +9,7 @@
 #import <React/RCTRootView.h>
 #import <React/RCTBridge.h>
 
-//#define APP_VERSION ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"])
+#define APP_VERSION ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"])
 
 typedef void(^CompletionBlock)(BOOL result);
 
