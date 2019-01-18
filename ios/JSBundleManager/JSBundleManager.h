@@ -25,6 +25,8 @@ typedef void(^CompletionBlock)(BOOL result);
 
 - (BOOL)hasAssetsInDocumentsDirectory;
 
+- (BOOL)hasAssetsInProjectDirectory;
+
 - (NSString *)pathForJSBundleInProject;
 
 - (NSString *)pathForAssetsInProject;

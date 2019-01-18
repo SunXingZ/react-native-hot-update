@@ -8,8 +8,8 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger, RequestMethod) {
-  RequestMethodGET,
-  RequestMethodPOST,
+    RequestMethodGET,
+    RequestMethodPOST,
 };
 
 typedef void(^CompletionBlock)(BOOL result);
